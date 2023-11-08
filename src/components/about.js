@@ -32,43 +32,14 @@ const About = () => {
                         </p>
                         <hr ></hr>
                         <div className="about-sub-title">
-                            <p onClick={() => handleActiveLink('Skills')} className={activeLink === "Skills" ? "about-sub-links active-about-link" : "about-sub-links"} >Skills</p>
-                            <p onClick={() => handleActiveLink('Education')} className={activeLink === "Education" ? "about-sub-links active-about-link" : "about-sub-links"} >Education</p>
                             <p onClick={() => handleActiveLink('Project')} className={activeLink === "Project" ? "about-sub-links active-about-link" : "about-sub-links"} >Project Experience</p>
+                            {/* <p onClick={() => handleActiveLink('Skills')} className={activeLink === "Skills" ? "about-sub-links active-about-link" : "about-sub-links"} >Skills</p> */}
+                            <p onClick={() => handleActiveLink('Education')} className={activeLink === "Education" ? "about-sub-links active-about-link" : "about-sub-links"} >Education</p>
+
                         </div>
                         <div className="about-sub-content">
                             {
-                                activeLink === "Skills" ? (
-                                    <div className="about-kills">
-                                        <ul className="ul-div">
-                                            <li>
-                                                <Card img_src={js_img} text='Javascript' />
-                                            </li>
-                                            <li>
-                                                <Card img_src={react_img} text='React js' />
-                                            </li>
-                                            <li>
-                                                <Card img_src={redux_img} text='Redux' />
-                                            </li>
-                                            <li>
-                                                <Card img_src={node_js} text='Node Js' />
-                                            </li>
-                                            <li>
-                                                <Card img_src={html} text='HTML' />
-                                            </li>
-                                            <li>
-                                                <Card img_src={css} text='CSS' />
-                                            </li>
-                                            <li>
-                                                <Card img_src={mongodb} text='MongoDB' />
-                                            </li>
-                                            <li>
-                                                <Card img_src={rest_api} text='REST API' />
-                                            </li>
-                                        </ul>
-                                    </div>
-                                ) : (
-                                    activeLink === "Education" ? (
+                                activeLink === "Education" ? (
                                         <div className="education-div">
                                             <div className="education-col">
                                                 <h2>MCA</h2>
@@ -188,16 +159,45 @@ const About = () => {
                                                 <p>
                                                     <span className="project-skills-used-text">Skills used: </span>HTML, CSS, JavaScript, MySQL, PHP</p>
                                             </div>
-                                            <hr className="project-hr-line"></hr>
 
 
                                         </div>
                                     )
-                                )
+                                
                             }
                         </div>
                     </div>
 
+                </div>
+                <div className="about-kills" id='skills'>
+                    <h1>What I know</h1>
+                    <hr className="project-hr-line"></hr>
+                    <ul className="ul-div">
+                        <li>
+                            <Card img_src={js_img} text='Javascript' />
+                        </li>
+                        <li>
+                            <Card img_src={react_img} text='React js' />
+                        </li>
+                        <li>
+                            <Card img_src={redux_img} text='Redux' />
+                        </li>
+                        <li>
+                            <Card img_src={node_js} text='Node Js' />
+                        </li>
+                        <li>
+                            <Card img_src={html} text='HTML' />
+                        </li>
+                        <li>
+                            <Card img_src={css} text='CSS' />
+                        </li>
+                        <li>
+                            <Card img_src={mongodb} text='MongoDB' />
+                        </li>
+                        <li>
+                            <Card img_src={rest_api} text='REST API' />
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

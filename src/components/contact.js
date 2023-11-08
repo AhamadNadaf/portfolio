@@ -51,7 +51,7 @@ const Contact = () => {
                             <a href="https://github.com/AhamadNadaf" className="social-icon-hover" target="_blank">
                                 <FontAwesomeIcon icon={faGithub} bounce />
                             </a>
-                            <a href="#" className="social-icon-hover">
+                            <a href="https://www.instagram.com/_e__v_i__l___/" className="social-icon-hover">
                                 <FontAwesomeIcon icon={faInstagram} bounce />
                             </a>
 

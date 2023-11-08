@@ -25,6 +25,7 @@ const Header = () => {
                     <ul id="sideMenu">
                         <li><a className="header-li" href="#header">Home</a></li>
                         <li><a className="header-li" href="#about">About</a></li>
+                        <li><a className="header-li" href="#skills">Skills</a></li>
                         <li><a className="header-li" href="#contact-div">Contact</a></li>
                         <li><a href="images/Ahamad_CV.pdf" className="download-a" download >
                             <div className="download-button-header">
