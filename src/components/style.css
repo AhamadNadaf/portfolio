@@ -38,6 +38,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 100px;
+    background-color: #262626;
 }
 
 .logo-name {
@@ -232,6 +237,7 @@ nav ul li {
     margin-top: 50px;
 
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .about-kills ul li {
@@ -242,6 +248,9 @@ nav ul li {
 .about-kills ul li:hover {
     color: #68d388;
     cursor: pointer;
+}
+.card-link{
+    text-decoration: none;
 }
 
 .about-sub-content {
@@ -599,6 +608,9 @@ form input, form textarea{
 
 @media only screen and (max-width:520px) {
     .container {
+        padding: 10px 10px;
+    }
+    nav{
         padding: 10px 10px;
     }
 

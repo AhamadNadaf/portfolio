@@ -3,15 +3,6 @@ import about_me from '../assets/me-removebg-preview.png'
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreator } from '../state'
-import js_img from '../assets/js.png'
-import react_img from '../assets/react.png'
-import redux_img from '../assets/redux.png'
-import node_js from '../assets/node.png'
-import html from '../assets/html.png'
-import css from '../assets/css.png'
-import mongodb from '../assets/mongoDB.png'
-import rest_api from '../assets/rest_api.png'
-import Card from './card'
 
 
 const About = () => {
@@ -19,27 +10,28 @@ const About = () => {
     const dispatch = useDispatch()
     const { handleActiveLink } = bindActionCreators(actionCreator, dispatch)
     return (
-        <div className="about" id='about'>
-            <div className="about-container">
-                <div className="about-row">
-                    <div className="about-col-1">
-                        <img className="about-img" src={about_me} alt="about_img" />
-                    </div>
-                    <div className="about-col-2">
-                        <h1 className="about-title"><span className="letter-a">A</span>bout Me</h1>
-                        <p className="about-intro">
-                            I am a developer with knowledge of JavaScript, HTML, CSS, React JS, Redux, MongoDB, Node.js, Express.js and API integration, with a track record of successfully completed multiple projects.
-                        </p>
-                        <hr ></hr>
-                        <div className="about-sub-title">
-                            <p onClick={() => handleActiveLink('Project')} className={activeLink === "Project" ? "about-sub-links active-about-link" : "about-sub-links"} >Project Experience</p>
-                            {/* <p onClick={() => handleActiveLink('Skills')} className={activeLink === "Skills" ? "about-sub-links active-about-link" : "about-sub-links"} >Skills</p> */}
-                            <p onClick={() => handleActiveLink('Education')} className={activeLink === "Education" ? "about-sub-links active-about-link" : "about-sub-links"} >Education</p>
-
+        <>
+            <div className="about" id='about'>
+                <div className="about-container">
+                    <div className="about-row">
+                        <div className="about-col-1">
+                            <img className="about-img" src={about_me} alt="about_img" />
                         </div>
-                        <div className="about-sub-content">
-                            {
-                                activeLink === "Education" ? (
+                        <div className="about-col-2">
+                            <h1 className="about-title"><span className="letter-a">A</span>bout Me</h1>
+                            <p className="about-intro">
+                                I am a developer with knowledge of JavaScript, HTML, CSS, React JS, Redux, MongoDB, Node.js, Express.js and API integration, with a track record of successfully completed multiple projects.
+                            </p>
+                            <hr ></hr>
+                            <div className="about-sub-title">
+                                <p onClick={() => handleActiveLink('Project')} className={activeLink === "Project" ? "about-sub-links active-about-link" : "about-sub-links"} >Project Experience</p>
+                                {/* <p onClick={() => handleActiveLink('Skills')} className={activeLink === "Skills" ? "about-sub-links active-about-link" : "about-sub-links"} >Skills</p> */}
+                                <p onClick={() => handleActiveLink('Education')} className={activeLink === "Education" ? "about-sub-links active-about-link" : "about-sub-links"} >Education</p>
+
+                            </div>
+                            <div className="about-sub-content">
+                                {
+                                    activeLink === "Education" ? (
                                         <div className="education-div">
                                             <div className="education-col">
                                                 <h2>MCA</h2>
@@ -163,44 +155,18 @@ const About = () => {
 
                                         </div>
                                     )
-                                
-                            }
+
+                                }
+                            </div>
                         </div>
+
+
                     </div>
 
                 </div>
-                <div className="about-kills" id='skills'>
-                    <h1>What I know</h1>
-                    <hr className="project-hr-line"></hr>
-                    <ul className="ul-div">
-                        <li>
-                            <Card img_src={js_img} text='Javascript' />
-                        </li>
-                        <li>
-                            <Card img_src={react_img} text='React js' />
-                        </li>
-                        <li>
-                            <Card img_src={redux_img} text='Redux' />
-                        </li>
-                        <li>
-                            <Card img_src={node_js} text='Node Js' />
-                        </li>
-                        <li>
-                            <Card img_src={html} text='HTML' />
-                        </li>
-                        <li>
-                            <Card img_src={css} text='CSS' />
-                        </li>
-                        <li>
-                            <Card img_src={mongodb} text='MongoDB' />
-                        </li>
-                        <li>
-                            <Card img_src={rest_api} text='REST API' />
-                        </li>
-                    </ul>
-                </div>
             </div>
-        </div>
+            <div id='end-about'></div>
+        </>
     )
 }
 
